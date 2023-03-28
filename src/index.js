@@ -1,11 +1,16 @@
-import { sum } from "./sum";
-
-console.log(sum(2, 3));
+import printMe from "./print";
 
 const component = () => {
   const element = document.createElement("div");
 
   element.innerHTML = ["Hello", "webpack"].join(" ");
+
+  const button = document.createElement("button");
+
+  button.addEventListener("click", printMe);
+  button.innerHTML = "Click me";
+
+  element.appendChild(button);
 
   return element;
 };
