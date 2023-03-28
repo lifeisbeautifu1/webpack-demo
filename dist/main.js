@@ -1,1 +1,0 @@
-(()=>{"use strict";console.log(5),document.body.appendChild((()=>{const e=document.createElement("div");return e.innerHTML=["Hello","webpack"].join(" "),e})())})();
