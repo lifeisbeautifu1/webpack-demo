@@ -6,14 +6,22 @@ module.exports = {
     index: "./src/index.js",
     print: "./src/print.js",
   },
+  mode: "development",
+  devServer: {
+    static: "./dist",
+  },
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      title: "Development",
     }),
   ],
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
 };
